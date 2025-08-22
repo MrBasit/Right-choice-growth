@@ -1,5 +1,79 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@layer components{
+    .primary-container{
+        @apply max-w-[1260px] m-auto;
+    }
+    .bg-brand-gradient{
+        @apply bg-gradient-to-b from-brand-200 to-brand-300 text-white;
+    }
+    .btn-primary{
+        @apply md:py-4 py-3 md:px-8 px-5 
+        font-primary md:text-[18px] text-[12px]  
+        rounded-[30px] 
+        text-white bg-gradient-to-b from-brand-200 to-brand-300
+        hover:bg-gradient-to-tr
+    }
+    .btn-primary-light{
+        @apply md:py-4 py-3 md:px-8 px-5 
+        font-primary md:text-[18px] text-[12px]  
+        rounded-[30px] 
+        text-brand-300 bg-white;
+    }
+
+    .service{
+        @apply m-4 px-10 py-5
+        bg-white 
+        rounded-2xl 
+        flex flex-col items-center justify-between 
+        lg:w-[30%] md:w-[45%] w-[80%] 
+        shadow-box
+        hover:bg-gradient-to-b hover:from-brand-200 hover:to-brand-300 hover:text-white;
+    }
+    .service>*{
+        @apply sm:my-2 my-1;
+    }
+    .faq{
+        @apply p-4 m-4 flex items-center justify-between md:w-[80%] w-[90%] mx-auto border-2 border-gray-800 rounded-[15px]
+    }
+    .faq p{
+        @apply hidden;
+    }
+    .faq.active{
+        @apply border-0;
+    }
+    .faq.active p{
+        @apply block;
+    }
+    *{
+        @apply font-primary;
+    }
+    h1{
+        @apply font-primary md:text-4xl text-3xl font-semibold;
+    }
+    h2{
+        @apply font-primary md:text-3xl text-2xl font-semibold;
+    }
+    h3{
+        @apply font-primary md:text-2xl text-xl font-semibold;
+    }
+    h4{
+        @apply font-primary md:text-xl text-lg font-semibold;
+    }
+    p.big{
+        @apply lg:text-[24px] text-[18px];
+    }
+    a{
+        @apply inline-block;
+    }
+}
 
 @theme {
-  --color-brand: #0f0;
+  --color-brand-100: #F3800C33;
+  --color-brand-200: #F3800C;
+  --color-brand-300: #8D4A07;
+
+  --font-primary: "Montserrat", sans-serif;
+  --shadow-box: 0 0 15px rgba(0, 0, 0,0.15);
+
 }
