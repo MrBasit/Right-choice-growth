@@ -33,6 +33,26 @@
     .service>*{
         @apply sm:my-2 my-1;
     }
+
+    .testimonial{
+        @apply hidden my-15 lg:flex-row flex-col lg:items-center items-start w-[70%];
+    }
+    .testimonial.active{
+        @apply flex;
+    }
+
+    .icon-round{
+        @apply flex justify-center items-center mx-1 rounded-[50%] bg-gradient-to-b from-brand-200 to-brand-300 text-white;
+    }
+    .icon-round-light{
+        @apply p-2 mx-1 inline-block rounded-[50%] bg-white text-brand-200;
+
+    }
+    .icon-round.lg, .icon-round-light.lg{ @apply w-15 h-15 text-[24px]}
+    .icon-round.md, .icon-round-light.md{ @apply w-10 h-10 text-[16px]}
+    .icon-round.sm, .icon-round-light.sm{ @apply w-8 h-8 text-[12px]}
+    .icon-round.xsm, .icon-round-light.xsm{ @apply w-6 h-6 text-[10px] }
+
     .faq{
         @apply p-4 m-4 flex items-center justify-between md:w-[80%] w-[90%] mx-auto border-2 border-gray-800 rounded-[15px]
     }
@@ -45,6 +65,8 @@
     .faq.active p{
         @apply block;
     }
+
+
     *{
         @apply font-primary;
     }

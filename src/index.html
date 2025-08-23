@@ -11,12 +11,12 @@
         <nav class="sm:p-8 p-2 m-auto max-w-[1325px] sm:h-[90px] h-[70px] bg-white flex justify-between items-center rounded-[50px]">
             <a class="inline-block mb-2" href=""><img class="sm:w-[120px] w-[90px]" src="./img/logo.png" alt="logo"></a>
             <ul class="font-medium md:flex hidden">
-                <li class="p-2"><a class="p-2" href="">Services</a></li>
-                <li class="p-2"><a class="p-2" href="">Audience</a></li>
-                <li class="p-2"><a class="p-2" href="">Testimonial</a></li>
-                <li class="p-2"><a class="p-2" href="">FAQ</a></li>
+                <li class="p-2"><a class="p-2" href="#Services">Services</a></li>
+                <li class="p-2"><a class="p-2" href="#Audience">Audience</a></li>
+                <li class="p-2"><a class="p-2" href="#Testimonials">Testimonial</a></li>
+                <li class="p-2"><a class="p-2" href="#Faqs">FAQ</a></li>
             </ul>
-            <a href="#" class="btn-primary m-2 lg:text-[18px] lg:px-8 text-[12px] px-4">Contact Us</a>
+            <a href="#ContactUs" class="btn-primary m-2 lg:text-[18px] lg:px-8 text-[12px] px-4">Contact Us</a>
         </nav>
         <div class="primary-container flex items-center sm:p-8 p-2 py-4">
             <div class="sm:text-left text-center">
@@ -39,32 +39,32 @@
         </div>
         <div class="w-[100%] p-2 m-2 flex flex-wrap justify-around">
             <div class="service ">
-                <img class="inline-block w-16" src="./img/icon-service-motivate.png" alt="services-motivation-icon">
+                <span class="icon-round lg"><i class="fa-solid fa-magnifying-glass-dollar"></i></span>
                 <h3 class="text-center">Daily Motivated Seller Leads</h3>
                 <p class="text-center">Organized in a Google Sheet with timeline & motivation.</p>
             </div>
             <div class="service">
-                <img class="inline-block w-16" src="./img/icon-service-motivate.png" alt="services-motivation-icon">
+                <span class="icon-round lg"><i class="fa-solid fa-share-from-square"></i></i></span>
                 <h3 class="text-center">Hot Leads Sent Straight to You</h3>
                 <p class="text-center">we'll notify you instantly when someone is ready to talk.</p>
             </div>
             <div class="service">
-                <img class="inline-block w-16" src="./img/icon-service-motivate.png" alt="services-motivation-icon">
+                <span class="icon-round lg"><i class="fa-solid fa-person-chalkboard"></i></span>
                 <h3 class="text-center">Trained VAs Inside Your Business</h3>
                 <p class="text-center">calling, nurturing, and following up so you can just close.</p>
             </div>
             <div class="service">
-                <img class="inline-block w-16" src="./img/icon-service-motivate.png" alt="services-motivation-icon">
+                <span class="icon-round lg"><i class="fa-solid fa-gears"></i></span>
                 <h3 class="text-center">We Set Up Everything</h3>
                 <p class="text-center">CRM, forms, automations, AI text campaigns fully done for you.</p>
             </div>
             <div class="service">
-                <img class="inline-block w-16" src="./img/icon-service-motivate.png" alt="services-motivation-icon">
+                <span class="icon-round lg"><i class="fa-solid fa-gears"></i></span>
                 <h3 class="text-center">We Set Up Everything</h3>
                 <p class="text-center">CRM, forms, automations, AI text campaigns fully done for you.</p>
             </div>
             <div class="service">
-                <img class="inline-block w-16" src="./img/icon-service-motivate.png" alt="services-motivation-icon">
+                <span class="icon-round lg"><i class="fa-solid fa-arrow-up-right-dots"></i></span>
                 <h3 class="text-center">Weekly Growth Reviews</h3>
                 <p class="text-center">prioritize leads and focus your time.</p>
             </div>
@@ -114,22 +114,46 @@
 
     <div id="Testimonials" class="primary-container">
         <div class="flex justify-between items-center mx-4 px my-16 bg-gray-100 rounded-[15px]">
-            <span class="inline-block mx-1 cursor-pointer">
-                <img src="./img/icon-service-motivate.png" alt="left-arrow">
+            <span class="testimonial-previous icon-round lg:lg md cursor-pointer">
+                <i class="fa-solid fa-arrow-left"></i>
             </span>
-            <div class="testimonial my-15 flex items-center w-[70%]">
-                <img class="w-[230px] h-[230px]" src="./img/testimonial-client-1.png" alt="customer">
+            <div class="testimonial active">
+                <img class="lg:w-[230px] w-[180px] lg:h-[230px] h-[180px] lg:ml-0 ml-8" src="./img/testimonial-client-1.png" alt="customer">
                 <div class="mx-8">
                     <img class="inline-block my-2" src="./img/rating-5.png" alt="">
-                    <p class="my-4 text-[18px]">
+                    <p class="my-4 lg:text-[18px] text-[12px]">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae sunt eius similique deleniti laborum perferendis vel hic quos et necessitatibus in nulla excepturi debitis, ea assumenda voluptatibus odit quaerat. sectetur adipisicing elit. Quae sunt eius similique deleniti labosectetique deleniti laborum perferendis vel hic quos et necessitatibus in nulla excepturi debitis, ea assumenda v
                     </p>
                     <h4 class="mt-2">Zara Bush</h4>
-                    <p class="mb-2">Business Manger</p>
+                    <p class="mb-2 lg:text-[18px] text-[12px]">Business Manger</p>
                 </div>
             </div>
-            <span class="inline-block mx-1 cursor-pointer">
-                <img src="./img/icon-service-motivate.png" alt="right-arrow">
+
+            <div class="testimonial">
+                <img class="lg:w-[230px] w-[180px] lg:h-[230px] h-[180px] lg:ml-0 ml-8" src="./img/testimonial-client-1.png" alt="customer">
+                <div class="mx-8">
+                    <img class="inline-block my-2" src="./img/rating-5.png" alt="">
+                    <p class="my-4 lg:text-[18px] text-[12px]">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae sunt eius similique deleniti laborum perferendis vel hic quos et necessitatibus in nulla excepturiorum perferendis vel hic quos et necessitatibus in nulla excepturi debitis, ea assumenda v
+                    </p>
+                    <h4 class="mt-2">John Wick</h4>
+                    <p class="mb-2 lg:text-[18px] text-[12px]">Business Manger</p>
+                </div>
+            </div>
+
+            <div class="testimonial">
+                <img class="lg:w-[230px] w-[180px] lg:h-[230px] h-[180px] lg:ml-0 ml-8" src="./img/testimonial-client-1.png" alt="customer">
+                <div class="mx-8">
+                    <img class="inline-block my-2" src="./img/rating-5.png" alt="">
+                    <p class="my-4 lg:text-[18px] text-[12px]">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae sunt eius similique deleniti laborum perferendis vel hic quos et necessitatibus
+                    </p>
+                    <h4 class="mt-2">Mantra Ho</h4>
+                    <p class="mb-2 lg:text-[18px] text-[12px]">Business Manger</p>
+                </div>
+            </div>
+            <span class="testimonial-next icon-round lg:lg md cursor-pointer">
+                <i class="fa-solid fa-arrow-right"></i>
             </span>
         </div>
     </div>
@@ -146,26 +170,32 @@
 
     <div id="Faqs" class="flex flex-col items-center primary-container my-20">
         <h2>Frequently Asked Questions</h2>
-        <div class="faq ">
+        <div class="faq active bg-brand-gradient">
             <div class="w-[80%] mr-2">
                 <h3>Q: Lorem ipsum dolor sit.</h3>
                 <p class="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas beatae eius sint dolor exercitationem voluptas explicabo, ducimus velit a enim in doloremque sequi odio repellat architecto sit facilis cumque dolorem!</p>
             </div>
-            <img class="w-10 h-10 inline-block" src="./img/icon-service-motivate.png" alt="expand">
+            <span class="cursor-pointer faq-btn icon-round-light md">
+                <i class="fa-solid fa-minus"></i>
+            </span>
         </div>
-        <div class="faq active bg-brand-gradient ">
+        <div class="faq">
             <div class="w-[80%]">
                 <h3>Q: Lorem ipsum dolor sit.</h3>
                 <p class="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas beatae eius sint dolor exercitationem voluptas explicabo, ducimus velit a enim in doloremque sequi odio repellat architecto sit facilis cumque dolorem!</p>
             </div>
-            <img class="w-10 h-10 inline-block" src="./img/icon-service-motivate.png" alt="expand">
+            <span class="cursor-pointer faq-btn icon-round md">
+                <i class="fa-solid fa-plus"></i>
+            </span>
         </div>
         <div class="faq ">
             <div class="w-[80%]">
                 <h3>Q: Lorem ipsum dolor sit.</h3>
                 <p class="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas beatae eius sint dolor exercitationem voluptas explicabo, ducimus velit a enim in doloremque sequi odio repellat architecto sit facilis cumque dolorem!</p>
             </div>
-            <img class="w-10 h-10 inline-block" src="./img/icon-service-motivate.png" alt="expand">
+            <span class="cursor-pointer faq-btn icon-round md">
+                <i class="fa-solid fa-plus"></i>
+            </span>
         </div>
     </div>
 
@@ -179,19 +209,23 @@
         </div>
     </div>
 
-    <div id="ContactSection" class="primary-container flex lg:flex-row flex-col justify-between lg:items-center items-start px-4 my-16">
+    <div id="ContactUs" class="primary-container flex lg:flex-row flex-col justify-between lg:items-center items-start px-4 my-16">
         <div class="lg:w-auto my-4 width-[100%] flex lg:flex-col sm:flex-row flex-col justify-center">
             <div class="ml-4">
                 <h2>Contact Us</h2>
-                <div class="flex my-4">
-                    <img class="w-[30px] h-[30px]" src="./img/icon-service-motivate.png" alt="email icon">
+                <div class="flex items-start my-4">
+                    <span class="icon-round xsm">
+                        <i class="fa-regular fa-envelope"></i>
+                    </span>
                     <div class="ml-2">
                         <h4>Email</h4>
                         <p>rightchoicegrowth@gmail.com</p>
                     </div>
                 </div>
-                <div class="flex my-4">
-                    <img class="w-[30px] h-[30px]" src="./img/icon-service-motivate.png" alt="email icon">
+                <div class="flex items-start my-4">
+                    <span class="icon-round xsm">
+                        <i class="fa-solid fa-phone"></i>
+                    </span>
                     <div class="ml-2">
                         <h4>Phone</h4>
                         <p>(778) 968-4226</p>
@@ -201,27 +235,45 @@
             <div class="lg:my-8 sm:my-0 my-8 lg:ml-4 sm:ml-8 ml-4">
                 <h2>Follow Us</h2>
                 <ul class="flex my-2">
-                    <li><a href=""><img class="w-[50px] h-[50px] mr-4" src="./img/icon-service-motivate.png" alt="email icon"></a></li>
-                    <li><a href=""><img class="w-[50px] h-[50px] mr-4" src="./img/icon-service-motivate.png" alt="email icon"></a></li>
-                    <li><a href=""><img class="w-[50px] h-[50px] mr-4" src="./img/icon-service-motivate.png" alt="email icon"></a></li>
-                    <li><a href=""><img class="w-[50px] h-[50px] mr-4" src="./img/icon-service-motivate.png" alt="email icon"></a></li>
+                    <li><a href=""><span class="icon-round md"><i class="fa-brands fa-facebook"></i></span></a></li>
+                    <li><a href=""><span class="icon-round md"><i class="fa-brands fa-linkedin"></i></span></a></li>
+                    <li><a href=""><span class="icon-round md"><i class="fa-brands fa-twitter"></i></span></a></li>
+                    <li><a href=""><span class="icon-round md"><i class="fa-brands fa-instagram"></i></span></a></li>
                 </ul>
             </div>
         </div>
-        <div class="h-[600px] lg:min-w-[650px] min-w-[95%] lg:m-0 m-auto shadow-box rounded-[30px]">
-
+        <div class=" p-8 lg:min-w-[650px] min-w-[95%] lg:m-0 m-auto shadow-box rounded-[30px]">
+            <iframe
+            src="https://api.leadconnectorhq.com/widget/form/NBQWoZI8OojmdC13x3fa"
+                style="width:100%;height:100%;border:none;border-radius:3px"
+                id="inline-NBQWoZI8OojmdC13x3fa"
+                data-layout="{'id':'INLINE'}"
+                data-trigger-type="alwaysShow"
+                data-trigger-value=""
+                data-activation-type="alwaysActivated"
+                data-activation-value=""
+                data-deactivation-type="neverDeactivate"
+                data-deactivation-value=""
+                data-form-name="A2P REG FORM"
+                data-height="731"
+                data-layout-iframe-id="inline-NBQWoZI8OojmdC13x3fa"
+                data-form-id="NBQWoZI8OojmdC13x3fa"
+                title="A2P REG FORM">
+            </iframe>
         </div>
     </div>
 
     <footer class="md:m-4 m-2 p-6 rounded-[20px] bg-brand-100 flex flex-col items-center">
         <a href=""><img class="w-[120px]" src="./img/logo.png" alt="logo"></a>
         <ul class="font-medium flex my-4">
-            <li class="p-2"><a class="p-2" href="">Services</a></li>
-            <li class="p-2"><a class="p-2" href="">Testimonial</a></li>
-            <li class="p-2"><a class="p-2" href="">FAQ</a></li>
-            <li class="p-2"><a class="p-2" href="">Videos</a></li>
+            <li class="p-2"><a class="p-2" href="#Services">Services</a></li>
+            <li class="p-2"><a class="p-2" href="#Audience">Audiance</a></li>
+            <li class="p-2"><a class="p-2" href="#Testimonials">Testimonial</a></li>
+            <li class="p-2"><a class="p-2" href="#Faqs">FAQ</a></li>
         </ul>
         <p class="text-center">© 2025 Right Choice Growth, LLC. All rights reserved.</p>
     </footer>
+
+    <script src="https://link.msgsndr.com/js/form_embed.js"></script>
 </body>
 </html>
