@@ -1,5 +1,4 @@
 import './styles.css';
-
 import { gsap } from "gsap";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
