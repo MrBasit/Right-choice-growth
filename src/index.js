@@ -11,9 +11,84 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 // });
 
 document.addEventListener("DOMContentLoaded",()=>{
+    gsap.from('header nav',{
+        y:-30,
+        duration:0.9
+    })
+    gsap.from('.header-content h1',{
+        y:-20,
+        opacity:0,
+        duration:0.3,
+        delay:0
+    })
+    gsap.from('.header-content p',{
+        y:-20,
+        opacity:0,
+        duration:0.3,
+        delay:0.3
+    })
+    gsap.from('.header-content a',{
+        y:-20,
+        opacity:0,
+        duration:0.3,
+        delay:0.6
+    })
+    gsap.from('.header-content img',{
+        scale:0.7,
+        duration:0.9,
+        delay:0
+    })
 
-    let services = document.querySelectorAll('.service');
-    services.forEach(e=>{
+    document.querySelectorAll('.btn-primary, .btn-primary-light').forEach(btn=>{
+        btn.addEventListener('mouseenter',()=>{
+            gsap.to(btn,{scale:1.1, duration:0.3});
+        });
+        btn.addEventListener('mouseleave',()=>{
+            gsap.to(btn,{scale:1, duration:0.3});
+        });
+    })
+
+    document.querySelectorAll('#Videos > div > div').forEach(vid=>{
+        vid.addEventListener('mouseenter',()=>{
+            gsap.to(vid,{scale:0.9, duration:0.3});
+        });
+        vid.addEventListener('mouseleave',()=>{
+            gsap.to(vid,{scale:1, duration:0.3});
+        });
+        vid.addEventListener('click',()=>{
+            let popup = document.querySelector('#VideoPopup');
+            const iframe = document.getElementById("ytFrame");
+
+            popup.classList.remove('hidden');
+            popup.classList.add('flex');
+            iframe.src = 'https://www.youtube.com/embed/'+vid.dataset.video;
+            console.log(document.querySelector('#VideoPopup > div'));
+            gsap.fromTo(
+                document.querySelector('#VideoPopup > div'),
+                {scale:0.1, opacity:0.1},
+                {scale:1, opacity:1,duration:0.3}
+            );
+
+        })
+    })
+
+    let closeVid = document.querySelector('#VideoPopup button');
+    closeVid.addEventListener('click',()=>{
+        document.getElementById("ytFrame").src='';
+        console.log(document.querySelector('#VideoPopup > div'));
+        gsap.fromTo(
+            document.querySelector('#VideoPopup > div'),
+            {scale:1, opacity:1},
+            {scale:0.1, opacity:0.1,duration:0.3}
+        );
+        setTimeout(()=>{
+            closeVid.parentElement.parentElement.classList.remove('flex');
+            closeVid.parentElement.parentElement.classList.add('hidden');
+        },290)
+
+    })
+
+    document.querySelectorAll('.service').forEach(e=>{
         e.addEventListener("mouseenter", () => {
             gsap.to(e, { scale: 1.1, duration: 0.3, ease: "power1.out" });
             gsap.to(e, { "--color-service-bg-200": "#F3800C","--color-service-bg-300": "#8D4A07", duration: 0.3, ease: "power1.out" });
@@ -26,7 +101,6 @@ document.addEventListener("DOMContentLoaded",()=>{
             gsap.to(e, { "--color-service-bg-200": "#ffffff","--color-service-bg-300": "#ffffff", duration: 0.3, ease: "power1.out" });
             gsap.to(e.children[0], { "--color-service-icon-bg-200": "#F3800C","--color-service-icon-bg-300": "#8D4A07","--color-service-icon":"white", duration: 0.3, ease: "power1.out" });
         });
-
     })
     
 
@@ -128,8 +202,21 @@ document.addEventListener("DOMContentLoaded",()=>{
         testimonials.forEach((e,i)=>{
             if(e.classList.contains('active') && !isMovementComplete){
                 let nextitem = testimonials.item(i+1 == testimonials.length ? 0 : i+1);
-                e.classList.remove('active');
-                nextitem.classList.add('active');
+                
+                gsap.to(e,{
+                    opacity:0,
+                    duration:1
+                })
+                setTimeout(() => {
+                    e.classList.remove('active');
+                    nextitem.classList.add('active');
+                    gsap.set(e,{opacity:100});
+                }, 1000);
+                gsap.from(nextitem,{
+                    opacity:0,
+                    duration:5,
+                    delay:0.5
+                })
                 isMovementComplete = true;
             }
         });

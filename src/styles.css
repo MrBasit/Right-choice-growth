@@ -13,12 +13,14 @@
         rounded-[30px] 
         text-white bg-gradient-to-b from-brand-200 to-brand-300
         hover:bg-gradient-to-tr
+        scale-100
     }
     .btn-primary-light{
         @apply md:py-4 py-3 md:px-8 px-5 
         font-primary md:text-[18px] text-[12px]  
         rounded-[30px] 
-        text-brand-300 bg-white;
+        text-brand-300 bg-white
+        scale-100
     }
 
     .service{
@@ -37,7 +39,7 @@
         @apply hidden my-15 lg:flex-row flex-col lg:items-center items-start w-[70%];
     }
     .testimonial.active{
-        @apply flex;
+        @apply flex opacity-100;
     }
 
     .icon-round{
