@@ -23,12 +23,11 @@
 
     .service{
         @apply m-4 px-10 py-5
-        bg-white 
         rounded-2xl 
         flex flex-col items-center justify-between 
         lg:w-[30%] md:w-[45%] w-[80%] 
         shadow-box
-        hover:bg-gradient-to-b hover:from-brand-200 hover:to-brand-300 hover:text-white;
+        bg-gradient-to-b from-service-bg-200 to-service-bg-300 hover:text-white;
     }
     .service>*{
         @apply sm:my-2 my-1;
@@ -53,17 +52,20 @@
     .icon-round.sm, .icon-round-light.sm{ @apply w-8 h-8 text-[12px]}
     .icon-round.xsm, .icon-round-light.xsm{ @apply w-6 h-6 text-[10px] }
 
+    .icon-round.icon-service{
+        @apply bg-gradient-to-b from-service-icon-bg-200 to-service-icon-bg-300 text-white;
+    }
     .faq{
         @apply p-4 m-4 flex items-center justify-between md:w-[80%] w-[90%] mx-auto border-2 border-gray-800 rounded-[15px]
     }
     .faq p{
-        @apply hidden;
+        @apply overflow-hidden;
     }
     .faq.active{
         @apply border-0;
     }
     .faq.active p{
-        @apply block;
+        @apply h-auto;
     }
 
 
@@ -94,6 +96,18 @@
   --color-brand-100: #F3800C33;
   --color-brand-200: #F3800C;
   --color-brand-300: #8D4A07;
+
+  --color-service-bg-200: white;
+  --color-service-bg-300: white;
+  
+  --color-service-icon-bg-200: #F3800C;
+  --color-service-icon-bg-300: #8D4A07;
+  --color-service-icon-bg-200: #F3800C;
+  --color-service-icon-bg-300: #8D4A07;
+  --color-service-icon: white;
+
+  --service-gradient-200: #F3800C;
+  --service-gradient-300: #8D4A07;
 
   --font-primary: "Montserrat", sans-serif;
   --shadow-box: 0 0 15px rgba(0, 0, 0,0.15);
