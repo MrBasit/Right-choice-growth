@@ -29,14 +29,17 @@
         flex flex-col items-center justify-between 
         lg:w-[30%] md:w-[45%] w-[80%] 
         shadow-box
-        bg-gradient-to-b from-service-bg-200 to-service-bg-300 hover:text-white;
+        bg-gradient-to-b from-service-bg-200 to-service-bg-300 hover:text-white
+        scale-100 top-0;
+
     }
     .service>*{
         @apply sm:my-2 my-1;
     }
 
     .testimonial{
-        @apply hidden my-15 lg:flex-row flex-col lg:items-center items-start w-[70%];
+        @apply hidden my-15 lg:flex-row flex-col lg:items-center items-start md:w-[70%] sm:w-[90%] w-[95%] scale-100 left-0
+        col-start-1 row-start-1 bg-gray-100;
     }
     .testimonial.active{
         @apply flex opacity-100;

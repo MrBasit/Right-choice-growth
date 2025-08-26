@@ -3,30 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/site-icon.png">
     <title>Right Choice Growth | Home Page</title>
 </head>
 <body class="bg-white">
     <!-- Hero Section with Navigation -->
-    <header id="Hero" class="md:m-4 m-2 md:p-4 p-2 rounded-[20px] bg-brand-100">
-        <nav class="sm:p-8 p-2 m-auto max-w-[1325px] sm:h-[90px] h-[70px] bg-white flex justify-between items-center rounded-[50px]">
+    <header id="Hero" class="md:m-4 m-2 md:p-4 p-2 rounded-[20px] md:bg-brand-100 text-black md:bg-none bg-[url(./img/consultant-main-bg.png)] bg-no-repeat bg-cover">
+        <nav class="main-nav sm:p-8 p-2 m-auto max-w-[1325px] sm:h-[90px] h-[70px] bg-white md:flex hidden justify-between items-center rounded-[50px]">
             <a class="inline-block mb-2" href=""><img class="sm:w-[120px] w-[90px]" src="./img/logo.png" alt="logo"></a>
             <ul class="font-medium md:flex hidden">
                 <li class="p-2"><a class="p-2" href="#Services">Services</a></li>
                 <li class="p-2"><a class="p-2" href="#Audience">Audience</a></li>
-                <li class="p-2"><a class="p-2" href="#Testimonials">Testimonial</a></li>
+                <li class="p-2"><a class="p-2" href="#Videos">Testimonial</a></li>
                 <li class="p-2"><a class="p-2" href="#Faqs">FAQ</a></li>
             </ul>
             <a href="#ContactUs" class="btn-primary m-2 lg:text-[18px] lg:px-8 text-[12px] px-4">Contact Us</a>
         </nav>
+        <nav class="sec-nav bg-white rounded-[20px] p-2 m-2 md:hidden block">
+            <div class="flex justify-between items-center">
+                <a class="inline-block mb-2" href=""><img class="sm:w-[120px] w-[90px]" src="./img/logo.png" alt="logo"></a>
+                <span class="open icon-round lg cursor-pointer">
+                    <i class="fa-solid fa-bars"></i>
+                </span>
+                <span class="close icon-round lg cursor-pointer hidden">
+                    <i class="fa-solid fa-xmark"></i>
+                </span>
+            </div>
+            <ul class="font-medium h-0 hidden overflow-hidden">
+                <li class="p-2 opacity-100"><a class="p-2" href="#Services">Services</a></li>
+                <li class="p-2 opacity-100"><a class="p-2" href="#Audience">Audience</a></li>
+                <li class="p-2 opacity-100"><a class="p-2" href="#Videos">Testimonial</a></li>
+                <li class="p-2 opacity-100"><a class="p-2" href="#Faqs">FAQ</a></li>
+            </ul>
+        </nav>
+
         <div class="header-content primary-container flex items-center sm:p-8 p-2 py-4">
-            <div class="sm:text-left text-center">
-                <h1 class="opacity-100">
-                    How To Build A 6 Figure Lead Machine Without Cold Calling All Day
+            <div class="md:text-left text-center md:text-black text-white">
+                <h1 class="opacity-100 my-4">
+                    How To Build A scalebale lead generation system without calling all day
                 </h1>
-                <p class="opacity-100">
+                <p class="opacity-100 my-4">
                     Stop chasing leads and start closing deals. With our done for you system, you’ll get daily motivated seller leads, AI powered follow ups, and trained VAs who handle the busy work so you can focus on growth.
                 </p>
-                <a href="#" class="opacity-100 btn-primary my-4">Start Getting Leads Today</a>
+                <a href="#ContactUs" class="opacity-100 btn-primary mt-4">Start Getting Leads Today</a>
             </div>
             <img class="md:inline-block hidden lg:w-[525px] w-[350px] scale-100" src="./img/consultant-main.png" alt="consultant-main">
         </div>
@@ -60,8 +79,8 @@
             </div>
             <div class="service">
                 <span class="icon-round icon-service lg"><i class="text-service-icon fa-solid fa-gears"></i></span>
-                <h3 class="text-center">We Set Up Everything</h3>
-                <p class="text-center">CRM, forms, automations, AI text campaigns fully done for you.</p>
+                <h3 class="text-center">AI Text Blasts</h3>
+                <p class="text-center"> every lead who doesn’t answer gets automated follow-up on your behalf.</p>
             </div>
             <div class="service">
                 <span class="icon-round icon-service lg"><i class="text-service-icon fa-solid fa-arrow-up-right-dots"></i></span>
@@ -93,7 +112,7 @@
                     <p>Anyone serious about scaling a lead machine they own</p>
                 </li>
             </ul>
-            <a class="btn-primary mt-4" href="">Start Getting Leads Today</a>
+            <a class="btn-primary mt-4" href="#ContactUs">Start Getting Leads Today</a>
         </div>
     </div>
 
@@ -112,44 +131,47 @@
         </div>
     </div>
 
-    <div id="Testimonials" class="primary-container">
+    <div id="Testimonials" class="hidden primary-container">
         <div class="flex justify-between items-center mx-4 px my-16 bg-gray-100 rounded-[15px]">
             <span class="testimonial-previous icon-round lg:lg md cursor-pointer">
                 <i class="fa-solid fa-arrow-left"></i>
             </span>
-            <div class="testimonial active">
-                    <img class="lg:w-[230px] w-[180px] lg:h-[230px] h-[180px] lg:ml-0 ml-8" src="./img/testimonial-client-1.png" alt="customer">
-                    <div class="mx-8">
-                        <img class="inline-block my-2" src="./img/rating-5.png" alt="">
-                        <p class="my-4 lg:text-[18px] text-[12px]">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae sunt eius similique deleniti laborum perferendis vel hic quos et necessitatibus in nulla excepturi debitis, ea assumenda voluptatibus odit quaerat. sectetur adipisicing elit. Quae sunt eius similique deleniti labosectetique deleniti laborum perferendis vel hic quos et necessitatibus in nulla excepturi debitis, ea assumenda v
-                        </p>
-                        <h4 class="mt-2">Zara Bush</h4>
-                        <p class="mb-2 lg:text-[18px] text-[12px]">Business Manger</p>
+            <div class="min-h-[500px] w-[90%] mx-4 px my-4
+            grid relative place-items-center">
+                <div class=" testimonial active">
+                        <img class="lg:w-[230px] w-[180px] lg:h-[230px] h-[180px] lg:ml-0 ml-8" src="./img/testimonial-client-1.png" alt="customer">
+                        <div class="mx-8">
+                            <img class="inline-block my-2" src="./img/rating-5.png" alt="">
+                            <p class="my-4 lg:text-[18px] text-[12px]">
+                                Finding the right office space felt overwhelming until I connected with this team. They guided me through listings, negotiated with landlords, and ensured every detail was clear. Their honesty and commitment made the whole process stress-free, and I’m truly grateful for their support in making such an important decision for my company.
+                            </p>
+                            <h4 class="mt-2">Sarah Mitchell</h4>
+                            <p class="mb-2 lg:text-[18px] text-[12px]">Marketing Manager, Brightstone Interiors</p>
+                        </div>
                     </div>
-                </div>
 
-            <div class="testimonial">
-                    <img class="lg:w-[230px] w-[180px] lg:h-[230px] h-[180px] lg:ml-0 ml-8" src="./img/testimonial-client-1.png" alt="customer">
-                    <div class="mx-8">
-                        <img class="inline-block my-2" src="./img/rating-5.png" alt="">
-                        <p class="my-4 lg:text-[18px] text-[12px]">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae sunt eius similique deleniti laborum perferendis vel hic quos et necessitatibus in nulla excepturiorum perferendis vel hic quos et necessitatibus in nulla excepturi debitis, ea assumenda v
-                        </p>
-                        <h4 class="mt-2">John Wick</h4>
-                        <p class="mb-2 lg:text-[18px] text-[12px]">Business Manger</p>
+                <div class="testimonial">
+                        <img class="lg:w-[230px] w-[180px] lg:h-[230px] h-[180px] lg:ml-0 ml-8" src="./img/testimonial-client-2png.png" alt="customer">
+                        <div class="mx-8">
+                            <img class="inline-block my-2" src="./img/rating-5.png" alt="">
+                            <p class="my-4 lg:text-[18px] text-[12px]">
+                                As someone looking to invest in commercial real estate, I needed advice I could trust. The team not only helped me identify the right property but also provided detailed insights into growth potential and rental yields.
+                            </p>
+                            <h4 class="mt-2">Omar Khan</h4>
+                            <p class="mb-2 lg:text-[18px] text-[12px]">Entrepreneur & Startup Founder</p>
+                        </div>
                     </div>
-                </div>
 
-            <div class="testimonial">
-                    <img class="lg:w-[230px] w-[180px] lg:h-[230px] h-[180px] lg:ml-0 ml-8" src="./img/testimonial-client-1.png" alt="customer">
-                    <div class="mx-8">
-                        <img class="inline-block my-2" src="./img/rating-5.png" alt="">
-                        <p class="my-4 lg:text-[18px] text-[12px]">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae sunt eius similique deleniti laborum perferendis vel hic quos et necessitatibus
-                        </p>
-                        <h4 class="mt-2">Mantra Ho</h4>
-                        <p class="mb-2 lg:text-[18px] text-[12px]">Business Manger</p>
+                <div class="testimonial">
+                        <img class="lg:w-[230px] w-[180px] lg:h-[230px] h-[180px] lg:ml-0 ml-8" src="./img/testimonial-client-3png.png" alt="customer">
+                        <div class="mx-8">
+                            <img class="inline-block my-2" src="./img/rating-5.png" alt="">
+                            <p class="my-4 lg:text-[18px] text-[12px]">
+                                Purchasing my first home was a big milestone, but I wasn’t sure where to begin. From shortlisting properties to understanding financing options, their step-by-step guidance was invaluable. They treated my concerns with care and patience, ensuring I felt comfortable at every stage. Thanks to them, I now have a home I truly love.
+                            </p>
+                            <h4 class="mt-2">Jennifer Lee</h4>
+                            <p class="mb-2 lg:text-[18px] text-[12px]">HR Director, NovaTech Solutions</p>
+                    </div>
                 </div>
             </div>
             <span class="testimonial-next icon-round lg:lg md cursor-pointer">
@@ -163,7 +185,7 @@
             <div class="sm:w-[80%] w-[90%] m-auto flex flex-col items-center">
                 <h2 class="my-2 text-center">Book a Free 45 Minute Consultation</h2>
                 <p class="big my-2 text-white text-center">We'll discuss your business, systems, and identify areas where a Monster Task Virtual Assistant can make a significant impact.</p>
-                <a class="my-2 btn-primary-light inline-block" href="">Book a Descovery Call</a>
+                <a class="my-2 btn-primary-light inline-block" href="#ContactUs">Book a Descovery Call</a>
             </div>
         </div>
     </div>
@@ -172,8 +194,8 @@
         <h2>Frequently Asked Questions</h2>
         <div class="faq active bg-brand-gradient">
             <div class="w-[80%] mr-2">
-                <h3>Q: Lorem ipsum dolor sit.</h3>
-                <p class="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas beatae eius sint dolor exercitationem voluptas explicabo, ducimus velit a enim in doloremque sequi odio repellat architecto sit facilis cumque dolorem!</p>
+                <h3>Q: When will I start seeing leads after joining RCG?</h3>
+                <p class="my-4">You start seeing leads from Day 1.</p>
             </div>
             <span class="cursor-pointer faq-btn icon-round-light md">
                 <i class="fa-solid fa-minus"></i>
@@ -181,8 +203,8 @@
         </div>
         <div class="faq">
             <div class="w-[80%]">
-                <h3>Q: Lorem ipsum dolor sit.</h3>
-                <p class="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas beatae eius sint dolor exercitationem voluptas explicabo, ducimus velit a enim in doloremque sequi odio repellat architecto sit facilis cumque dolorem!</p>
+                <h3>Q: Do you help with setup, or do I need to do it myself?</h3>
+                <p class="my-4">We handle the entire setup for you — from connecting your VA and Google Sheet to integrating AI follow-up systems. You don’t need to be tech-savvy. Once complete, you’ll start getting quality leads directly into your Google Sheet while building a database that grows over time.</p>
             </div>
             <span class="cursor-pointer faq-btn icon-round md">
                 <i class="fa-solid fa-plus"></i>
@@ -190,8 +212,53 @@
         </div>
         <div class="faq ">
             <div class="w-[80%]">
-                <h3>Q: Lorem ipsum dolor sit.</h3>
-                <p class="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas beatae eius sint dolor exercitationem voluptas explicabo, ducimus velit a enim in doloremque sequi odio repellat architecto sit facilis cumque dolorem!</p>
+                <h3>Q: How are leads delivered to me?</h3>
+                <p class="my-4">Leads go straight into your Google Sheet, and you’ll also get instant notifications by text or email so you can follow up right away. Our automation continues working in the background during business hours to nurture your pipeline.</p>
+            </div>
+            <span class="cursor-pointer faq-btn icon-round md">
+                <i class="fa-solid fa-plus"></i>
+            </span>
+        </div>
+
+
+        <div class="faq ">
+            <div class="w-[80%]">
+                <h3>Q: Do we get scripts on how to follow up?</h3>
+                <p class="my-4">Yes. We provide you with proven scripts word-for-word so you know exactly what to say to book more appointments.</p>
+            </div>
+            <span class="cursor-pointer faq-btn icon-round md">
+                <i class="fa-solid fa-plus"></i>
+            </span>
+        </div>
+        <div class="faq ">
+            <div class="w-[80%]">
+                <h3>Q: What happens after I get a lead?</h3>
+                <p class="my-4">We deliver motivated, warm leads. Your role is simple: call, text, or leave a voicemail to book the appointment. Then show up ready to close.</p>
+            </div>
+            <span class="cursor-pointer faq-btn icon-round md">
+                <i class="fa-solid fa-plus"></i>
+            </span>
+        </div>
+        <div class="faq ">
+            <div class="w-[80%]">
+                <h3>Q: What if I don’t know how to get a listing or contract signed at the appointment?</h3>
+                <p class="my-4">If you’re new to the business, we recommend partnering with an experienced agent who can help you close these motivated leads. This allows you to build your name, brand, and confidence faster.</p>
+            </div>
+            <span class="cursor-pointer faq-btn icon-round md">
+                <i class="fa-solid fa-plus"></i>
+            </span>
+        </div>
+        <div class="faq ">
+            <div class="w-[80%]">
+                <h3>Q: What leads are we targeting?</h3>
+                <p class="my-4">We target the most motivated seller niches, including:
+                        <br>•	Expired & canceled listings
+                        <br>•	Likely-to-move homeowners
+                        <br>•	Probate & senior downsizers
+                        <br>•	Distressed properties
+                        <br>•	Absentee landlords
+                        <br>•	For Sale By Owners (FSBOs)
+                        <br>•	…and more.</p>
             </div>
             <span class="cursor-pointer faq-btn icon-round md">
                 <i class="fa-solid fa-plus"></i>
@@ -200,16 +267,16 @@
     </div>
 
     <div id="Transform" class="primary-container my-8 ">
-        <div class="md:mx-4 mx-2 bg-[url('./img/bg-transform.png')] text-white rounded-[30px] px-10 py-15">
+        <div class="md:mx-4 mx-2 bg-[url('./img/bg-transform.png')] bg-center text-white rounded-[30px] px-10 py-15">
             <div class="sm:w-[65%] w-[75%] m-auto flex flex-col items-center">
                 <h2 class="my-2 text-center">Ready to transform and scale your business?</h2>
                 <p class="big my-2 text-white text-center">Contact Monster Task today and discover how we can help you achieve your goals while saving on payroll costs.</p>
-                <a class="my-2 btn-primary inline-block" href="">Book a Descovery Call</a>
+                <a class="my-2 btn-primary inline-block" href="#ContactUs">Book a Descovery Call</a>
             </div>
         </div>
     </div>
 
-    <!-- <div id="ContactUs" class="primary-container flex lg:flex-row flex-col justify-between lg:items-center items-start px-4 my-16">
+    <div id="ContactUs" class="primary-container flex lg:flex-row flex-col justify-between lg:items-center items-start px-4 my-16">
         <div class="lg:w-auto my-4 width-[100%] flex lg:flex-col sm:flex-row flex-col justify-center">
             <div class="ml-4">
                 <h2>Contact Us</h2>
@@ -261,11 +328,11 @@
                 title="A2P REG FORM">
             </iframe>
         </div>
-    </div> -->
+    </div>
 
     <footer class="md:m-4 m-2 p-6 rounded-[20px] bg-brand-100 flex flex-col items-center">
         <a href=""><img class="w-[120px]" src="./img/logo.png" alt="logo"></a>
-        <ul class="font-medium flex my-4">
+        <ul class="sm:font-medium text-[12px] flex my-4">
             <li class="p-2"><a class="p-2" href="#Services">Services</a></li>
             <li class="p-2"><a class="p-2" href="#Audience">Audiance</a></li>
             <li class="p-2"><a class="p-2" href="#Testimonials">Testimonial</a></li>
