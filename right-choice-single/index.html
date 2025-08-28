@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/site-icon.png">
+    <title>Right Choice Growth | Home Page</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Libertinus+Serif+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/5393009ca8.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @layer components{
+    .primary-container{
+        @apply max-w-[1260px] m-auto;
+    }
+    .bg-brand-gradient{
+        @apply bg-gradient-to-b from-brand-200 to-brand-300 text-white;
+    }
+    .btn-primary{
+        @apply md:py-4 py-3 md:px-8 px-5 
+        font-primary md:text-[18px] text-[12px]  
+        rounded-[30px] 
+        text-white bg-gradient-to-b from-brand-200 to-brand-300
+        hover:bg-gradient-to-tr
+        scale-100
+    }
+    .btn-primary-light{
+        @apply md:py-4 py-3 md:px-8 px-5 
+        font-primary md:text-[18px] text-[12px]  
+        rounded-[30px] 
+        text-brand-300 bg-white
+        scale-100
+    }
+
+    .service{
+        @apply m-4 px-10 py-5
+        rounded-2xl 
+        flex flex-col items-center justify-between 
+        lg:w-[30%] md:w-[45%] w-[80%] 
+        shadow-box
+        bg-gradient-to-b from-service-bg-200 to-service-bg-300 hover:text-white
+        scale-100 top-0;
+
+    }
+    .service>*{
+        @apply sm:my-2 my-1;
+    }
+
+    .testimonial{
+        @apply hidden my-15 lg:flex-row flex-col lg:items-center items-start md:w-[70%] sm:w-[90%] w-[95%] scale-100 left-0
+        col-start-1 row-start-1 bg-gray-100;
+    }
+    .testimonial.active{
+        @apply flex opacity-100;
+    }
+
+    .icon-round{
+        @apply flex justify-center items-center mx-1 rounded-[50%] bg-gradient-to-b from-brand-200 to-brand-300 text-white;
+    }
+    .icon-round-light{
+        @apply p-2 mx-1 inline-block rounded-[50%] bg-white text-brand-200;
+
+    }
+    .icon-round.lg, .icon-round-light.lg{ @apply w-15 h-15 text-[24px]}
+    .icon-round.md, .icon-round-light.md{ @apply w-10 h-10 text-[16px]}
+    .icon-round.sm, .icon-round-light.sm{ @apply w-8 h-8 text-[12px]}
+    .icon-round.xsm, .icon-round-light.xsm{ @apply w-6 h-6 text-[10px] }
+
+    .icon-round.icon-service{
+        @apply bg-gradient-to-b from-service-icon-bg-200 to-service-icon-bg-300 text-white;
+    }
+    .faq{
+        @apply p-4 m-4 flex items-center justify-between md:w-[80%] w-[90%] mx-auto border-2 border-gray-800 rounded-[15px]
+    }
+    .faq p{
+        @apply overflow-hidden;
+    }
+    .faq.active{
+        @apply border-0;
+    }
+    .faq.active p{
+        @apply h-auto;
+    }
+
+
+    *{
+        @apply font-primary;
+    }
+    h1{
+        @apply font-primary md:text-4xl text-3xl font-semibold;
+    }
+    h2{
+        @apply font-primary md:text-3xl text-2xl font-semibold;
+    }
+    h3{
+        @apply font-primary md:text-2xl text-xl font-semibold;
+    }
+    h4{
+        @apply font-primary md:text-xl text-lg font-semibold;
+    }
+    p.big{
+        @apply lg:text-[24px] text-[18px];
+    }
+    a{
+        @apply inline-block;
+    }
+}
+
+@theme {
+  --color-brand-100: #F3800C33;
+  --color-brand-200: #F3800C;
+  --color-brand-300: #8D4A07;
+
+  --color-service-bg-200: white;
+  --color-service-bg-300: white;
+  
+  --color-service-icon-bg-200: #F3800C;
+  --color-service-icon-bg-300: #8D4A07;
+  --color-service-icon-bg-200: #F3800C;
+  --color-service-icon-bg-300: #8D4A07;
+  --color-service-icon: white;
+
+  --service-gradient-200: #F3800C;
+  --service-gradient-300: #8D4A07;
+
+  --font-primary: "Montserrat", sans-serif;
+  --shadow-box: 0 0 15px rgba(0, 0, 0,0.15);
+
+}
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Hero Section with Navigation -->
+    <header id="Hero" class="md:m-4 m-2 md:p-4 p-2 rounded-[20px] md:bg-brand-100 text-black md:bg-none bg-[url(./img/consultant-main-bg.png)] bg-no-repeat bg-cover">
+        <nav class="main-nav sm:p-8 p-2 m-auto max-w-[1325px] sm:h-[90px] h-[70px] bg-white md:flex hidden justify-between items-center rounded-[50px]">
+            <a class="inline-block mb-2" href=""><img class="sm:w-[120px] w-[90px]" src="https://raw.githubusercontent.com/MrBasit/Right-choice-growth/refs/heads/master/src/img/logo.png" alt="logo"></a>
+            <ul class="font-medium md:flex hidden">
+                <li class="p-2"><a class="p-2" href="#Services">Services</a></li>
+                <li class="p-2"><a class="p-2" href="#Audience">Audience</a></li>
+                <li class="p-2"><a class="p-2" href="#Videos">Testimonial</a></li>
+                <li class="p-2"><a class="p-2" href="#Faqs">FAQ</a></li>
+            </ul>
+            <a href="#ContactUs" class="btn-primary m-2 lg:text-[18px] lg:px-8 text-[12px] px-4">Contact Us</a>
+        </nav>
+        <nav class="sec-nav bg-white rounded-[20px] p-2 m-2 md:hidden block">
+            <div class="flex justify-between items-center">
+                <a class="inline-block mb-2" href=""><img class="sm:w-[120px] w-[90px]" src="https://raw.githubusercontent.com/MrBasit/Right-choice-growth/refs/heads/master/src/img/logo.png" alt="logo"></a>
+                <span class="open icon-round lg cursor-pointer">
+                    <i class="fa-solid fa-bars"></i>
+                </span>
+                <span class="close icon-round lg cursor-pointer hidden">
+                    <i class="fa-solid fa-xmark"></i>
+                </span>
+            </div>
+            <ul class="font-medium h-0 hidden overflow-hidden">
+                <li class="p-2 opacity-100"><a class="p-2" href="#Services">Services</a></li>
+                <li class="p-2 opacity-100"><a class="p-2" href="#Audience">Audience</a></li>
+                <li class="p-2 opacity-100"><a class="p-2" href="#Videos">Testimonial</a></li>
+                <li class="p-2 opacity-100"><a class="p-2" href="#Faqs">FAQ</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-content primary-container flex items-center sm:p-8 p-2 py-4">
+            <div class="md:text-left text-center md:text-black text-white">
+                <h1 class="opacity-100 my-4">
+                    How To Build A scalebale lead generation system without calling all day
+                </h1>
+                <p class="opacity-100 my-4">
+                    Stop chasing leads and start closing deals. With our done for you system, you’ll get daily motivated seller leads, AI powered follow ups, and trained VAs who handle the busy work so you can focus on growth.
+                </p>
+                <a href="#ContactUs" class="opacity-100 btn-primary mt-4">Start Getting Leads Today</a>
+            </div>
+            <img class="md:inline-block hidden lg:w-[525px] w-[350px] scale-100" src="https://raw.githubusercontent.com/MrBasit/Right-choice-growth/refs/heads/master/src/img/consultant-main.png" alt="consultant-main">
+        </div>
+    </header>
+    
+    <div id="Services" class="primary-container md:p-4 p-2">
+        <div class="md:p-4 p-2 sm:text-left">
+            <h2 class="text-center">Helping Real Estate Agents & Investors Close More Deals Without Chasing Leads</h2>
+            <p class="text-center">How We Help You Scale (Without Posting, Prospecting, or Paying for Courses)</p>
+        </div>
+        <div class="w-[100%] p-2 m-2 flex flex-wrap justify-around">
+            <div class="service ">
+                <span class="icon-round icon-service lg"><i class="text-service-icon fa-solid fa-magnifying-glass-dollar"></i></span>
+                <h3 class="text-center">Daily Motivated Seller Leads</h3>
+                <p class="text-center">Organized in a Google Sheet with timeline & motivation.</p>
+            </div>
+            <div class="service">
+                <span class="icon-round icon-service lg"><i class="text-service-icon fa-solid fa-share-from-square"></i></i></span>
+                <h3 class="text-center">Hot Leads Sent Straight to You</h3>
+                <p class="text-center">we'll notify you instantly when someone is ready to talk.</p>
+            </div>
+            <div class="service">
+                <span class="icon-round icon-service lg"><i class="text-service-icon fa-solid fa-person-chalkboard"></i></span>
+                <h3 class="text-center">Trained VAs Inside Your Business</h3>
+                <p class="text-center">calling, nurturing, and following up so you can just close.</p>
+            </div>
+            <div class="service">
+                <span class="icon-round icon-service lg"><i class="text-service-icon fa-solid fa-gears"></i></span>
+                <h3 class="text-center">We Set Up Everything</h3>
+                <p class="text-center">CRM, forms, automations, AI text campaigns fully done for you.</p>
+            </div>
+            <div class="service">
+                <span class="icon-round icon-service lg"><i class="text-service-icon fa-solid fa-gears"></i></span>
+                <h3 class="text-center">AI Text Blasts</h3>
+                <p class="text-center"> every lead who doesn’t answer gets automated follow-up on your behalf.</p>
+            </div>
+            <div class="service">
+                <span class="icon-round icon-service lg"><i class="text-service-icon fa-solid fa-arrow-up-right-dots"></i></span>
+                <h3 class="text-center">Weekly Growth Reviews</h3>
+                <p class="text-center">prioritize leads and focus your time.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="Audience" class="primary-container md:p-8 p-4 flex lg:flex-row flex-col items-center">
+        <img class="lg:w-[50%] w-[80%] lg:mb-0 mb-10 block" src="https://raw.githubusercontent.com/MrBasit/Right-choice-growth/refs/heads/master/src/img/user-audience.png" alt="service-user">
+        <div class="ml-8">
+            <h2>Who this is for:</h2>
+            <ul class="flex flex-col mt-4">
+                <li class="flex my-2">
+                    <img class="inline-block w-6 h-5 mr-2" src="https://raw.githubusercontent.com/MrBasit/Right-choice-growth/refs/heads/master/src/img/icon-list-item.png" alt="audience-list-icon">
+                    <p>Real Estate Agents or Investors earning $10K+/month</p>
+                </li>
+                <li class="flex my-2">
+                    <img class="inline-block w-6 h-5 mr-2" src="https://raw.githubusercontent.com/MrBasit/Right-choice-growth/refs/heads/master/src/img/icon-list-item.png" alt="audience-list-icon">
+                    <p>Part-time agents who want a real system doing the heavy lifting</p>
+                </li>
+                <li class="flex my-2">
+                    <img class="inline-block w-6 h-5 mr-2" src="https://raw.githubusercontent.com/MrBasit/Right-choice-growth/refs/heads/master/src/img/icon-list-item.png" alt="audience-list-icon">
+                    <p>Full-time entrepreneurs tired of chasing people</p>
+                </li>
+                <li class="flex my-2">
+                    <img class="inline-block w-6 h-5 mr-2" src="https://raw.githubusercontent.com/MrBasit/Right-choice-growth/refs/heads/master/src/img/icon-list-item.png" alt="audience-list-icon">
+                    <p>Anyone serious about scaling a lead machine they own</p>
+                </li>
+            </ul>
+            <a class="btn-primary mt-4" href="#ContactUs">Start Getting Leads Today</a>
+        </div>
+    </div>
+
+    <div id="Videos" class="my-8 primary-container flex flex-col items-center">
+        <h2 class="text-center mx-12">Businesses trust us for expert, flexible, and secure support, allowing you to focus on growth with confidence.</h2>
+        <div class="my-6 flex">
+            <div class="w-[300px] h-[410px] rounded-xl m-0.5 bg-[url(https://raw.githubusercontent.com/MrBasit/Right-choice-growth/refs/heads/master/src/img/video-thumbnail-1.png)] cursor-pointer" data-video="1BAUdLs_o80">
+                <!-- <img src="https://raw.githubusercontent.com/MrBasit/Right-choice-growth/refs/heads/master/src/img/icon-service-motivate.png" alt="icon-play"> -->
+            </div>
+            <div class="w-[300px] h-[410px] rounded-xl m-0.5 bg-[url(https://raw.githubusercontent.com/MrBasit/Right-choice-growth/refs/heads/master/src/img/video-thumbnail-1.png)] cursor-pointer sm:block hidden" data-video="qhtWvHsXoeY">
+                <!-- <img src="https://raw.githubusercontent.com/MrBasit/Right-choice-growth/refs/heads/master/src/img/icon-service-motivate.png" alt="icon-play"> -->
+            </div>
+            <div class="w-[300px] h-[410px] rounded-xl m-0.5 bg-[url(https://raw.githubusercontent.com/MrBasit/Right-choice-growth/refs/heads/master/src/img/video-thumbnail-1.png)] cursor-pointer lg:block hidden" data-video="1BAUdLs_o80">
+                <!-- <img src="https://raw.githubusercontent.com/MrBasit/Right-choice-growth/refs/heads/master/src/img/icon-service-motivate.png" alt="icon-play"> -->
+            </div>
+        </div>
+    </div>
+
+    <div id="Testimonials" class="hidden primary-container">
+        <div class="flex justify-between items-center mx-4 px my-16 bg-gray-100 rounded-[15px]">
+            <span class="testimonial-previous icon-round lg:lg md cursor-pointer">
+                <i class="fa-solid fa-arrow-left"></i>
+            </span>
+            <div class="min-h-[500px] w-[90%] mx-4 px my-4
+            grid relative place-items-center">
+                <div class=" testimonial active">
+                        <img class="lg:w-[230px] w-[180px] lg:h-[230px] h-[180px] lg:ml-0 ml-8" src="https://raw.githubusercontent.com/MrBasit/Right-choice-growth/refs/heads/master/src/img/testimonial-client-1.png" alt="customer">
+                        <div class="mx-8">
+                            <img class="inline-block my-2" src="https://raw.githubusercontent.com/MrBasit/Right-choice-growth/refs/heads/master/src/img/rating-5.png" alt="">
+                            <p class="my-4 lg:text-[18px] text-[12px]">
+                                Finding the right office space felt overwhelming until I connected with this team. They guided me through listings, negotiated with landlords, and ensured every detail was clear. Their honesty and commitment made the whole process stress-free, and I’m truly grateful for their support in making such an important decision for my company.
+                            </p>
+                            <h4 class="mt-2">Sarah Mitchell</h4>
+                            <p class="mb-2 lg:text-[18px] text-[12px]">Marketing Manager, Brightstone Interiors</p>
+                        </div>
+                    </div>
+
+                <div class="testimonial">
+                        <img class="lg:w-[230px] w-[180px] lg:h-[230px] h-[180px] lg:ml-0 ml-8" src="https://raw.githubusercontent.com/MrBasit/Right-choice-growth/refs/heads/master/src/img/testimonial-client-2png.png" alt="customer">
+                        <div class="mx-8">
+                            <img class="inline-block my-2" src="https://raw.githubusercontent.com/MrBasit/Right-choice-growth/refs/heads/master/src/img/rating-5.png" alt="">
+                            <p class="my-4 lg:text-[18px] text-[12px]">
+                                As someone looking to invest in commercial real estate, I needed advice I could trust. The team not only helped me identify the right property but also provided detailed insights into growth potential and rental yields.
+                            </p>
+                            <h4 class="mt-2">Omar Khan</h4>
+                            <p class="mb-2 lg:text-[18px] text-[12px]">Entrepreneur & Startup Founder</p>
+                        </div>
+                    </div>
+
+                <div class="testimonial">
+                        <img class="lg:w-[230px] w-[180px] lg:h-[230px] h-[180px] lg:ml-0 ml-8" src="https://raw.githubusercontent.com/MrBasit/Right-choice-growth/refs/heads/master/src/img/testimonial-client-3png.png" alt="customer">
+                        <div class="mx-8">
+                            <img class="inline-block my-2" src="https://raw.githubusercontent.com/MrBasit/Right-choice-growth/refs/heads/master/src/img/rating-5.png" alt="">
+                            <p class="my-4 lg:text-[18px] text-[12px]">
+                                Purchasing my first home was a big milestone, but I wasn’t sure where to begin. From shortlisting properties to understanding financing options, their step-by-step guidance was invaluable. They treated my concerns with care and patience, ensuring I felt comfortable at every stage. Thanks to them, I now have a home I truly love.
+                            </p>
+                            <h4 class="mt-2">Jennifer Lee</h4>
+                            <p class="mb-2 lg:text-[18px] text-[12px]">HR Director, NovaTech Solutions</p>
+                    </div>
+                </div>
+            </div>
+            <span class="testimonial-next icon-round lg:lg md cursor-pointer">
+                <i class="fa-solid fa-arrow-right"></i>
+            </span>
+        </div>
+    </div>
+
+    <div id="Consultation" class="primary-container my-8">
+        <div class="md:mx-4 mx-2 bg-brand-gradient text-white rounded-[30px] px-10 py-15">
+            <div class="sm:w-[80%] w-[90%] m-auto flex flex-col items-center">
+                <h2 class="my-2 text-center">Book a Free 45 Minute Consultation</h2>
+                <p class="big my-2 text-white text-center">We'll discuss your business, systems, and identify areas where a Monster Task Virtual Assistant can make a significant impact.</p>
+                <a class="my-2 btn-primary-light inline-block" href="#ContactUs">Book a Descovery Call</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="Faqs" class="flex flex-col items-center primary-container my-20">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq active bg-brand-gradient">
+            <div class="w-[80%] mr-2">
+                <h3>Q: When will I start seeing leads after joining RCG?</h3>
+                <p class="my-4">You start seeing leads from Day 1.</p>
+            </div>
+            <span class="cursor-pointer faq-btn icon-round-light md">
+                <i class="fa-solid fa-minus"></i>
+            </span>
+        </div>
+        <div class="faq">
+            <div class="w-[80%]">
+                <h3>Q: Do you help with setup, or do I need to do it myself?</h3>
+                <p class="my-4">We handle the entire setup for you — from connecting your VA and Google Sheet to integrating AI follow-up systems. You don’t need to be tech-savvy. Once complete, you’ll start getting quality leads directly into your Google Sheet while building a database that grows over time.</p>
+            </div>
+            <span class="cursor-pointer faq-btn icon-round md">
+                <i class="fa-solid fa-plus"></i>
+            </span>
+        </div>
+        <div class="faq ">
+            <div class="w-[80%]">
+                <h3>Q: How are leads delivered to me?</h3>
+                <p class="my-4">Leads go straight into your Google Sheet, and you’ll also get instant notifications by text or email so you can follow up right away. Our automation continues working in the background during business hours to nurture your pipeline.</p>
+            </div>
+            <span class="cursor-pointer faq-btn icon-round md">
+                <i class="fa-solid fa-plus"></i>
+            </span>
+        </div>
+
+
+        <div class="faq ">
+            <div class="w-[80%]">
+                <h3>Q: Do we get scripts on how to follow up?</h3>
+                <p class="my-4">Yes. We provide you with proven scripts word-for-word so you know exactly what to say to book more appointments.</p>
+            </div>
+            <span class="cursor-pointer faq-btn icon-round md">
+                <i class="fa-solid fa-plus"></i>
+            </span>
+        </div>
+        <div class="faq ">
+            <div class="w-[80%]">
+                <h3>Q: What happens after I get a lead?</h3>
+                <p class="my-4">We deliver motivated, warm leads. Your role is simple: call, text, or leave a voicemail to book the appointment. Then show up ready to close.</p>
+            </div>
+            <span class="cursor-pointer faq-btn icon-round md">
+                <i class="fa-solid fa-plus"></i>
+            </span>
+        </div>
+        <div class="faq ">
+            <div class="w-[80%]">
+                <h3>Q: What if I don’t know how to get a listing or contract signed at the appointment?</h3>
+                <p class="my-4">If you’re new to the business, we recommend partnering with an experienced agent who can help you close these motivated leads. This allows you to build your name, brand, and confidence faster.</p>
+            </div>
+            <span class="cursor-pointer faq-btn icon-round md">
+                <i class="fa-solid fa-plus"></i>
+            </span>
+        </div>
+        <div class="faq ">
+            <div class="w-[80%]">
+                <h3>Q: What leads are we targeting?</h3>
+                <p class="my-4">We target the most motivated seller niches, including:
+                        <br>•	Expired & canceled listings
+                        <br>•	Likely-to-move homeowners
+                        <br>•	Probate & senior downsizers
+                        <br>•	Distressed properties
+                        <br>•	Absentee landlords
+                        <br>•	For Sale By Owners (FSBOs)
+                        <br>•	…and more.</p>
+            </div>
+            <span class="cursor-pointer faq-btn icon-round md">
+                <i class="fa-solid fa-plus"></i>
+            </span>
+        </div>
+    </div>
+
+    <div id="Transform" class="primary-container my-8 ">
+        <div class="md:mx-4 mx-2 bg-[url('https://raw.githubusercontent.com/MrBasit/Right-choice-growth/refs/heads/master/src/img/bg-transform.png')] bg-center text-white rounded-[30px] px-10 py-15">
+            <div class="sm:w-[65%] w-[75%] m-auto flex flex-col items-center">
+                <h2 class="my-2 text-center">Ready to transform and scale your business?</h2>
+                <p class="big my-2 text-white text-center">Contact Monster Task today and discover how we can help you achieve your goals while saving on payroll costs.</p>
+                <a class="my-2 btn-primary inline-block" href="#ContactUs">Book a Descovery Call</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="ContactUs" class="primary-container flex lg:flex-row flex-col justify-between lg:items-center items-start px-4 my-16">
+        <div class="lg:w-auto my-4 width-[100%] flex lg:flex-col sm:flex-row flex-col justify-center">
+            <div class="ml-4">
+                <h2>Contact Us</h2>
+                <div class="flex items-start my-4">
+                    <span class="icon-round xsm">
+                        <i class="fa-regular fa-envelope"></i>
+                    </span>
+                    <div class="ml-2">
+                        <h4>Email</h4>
+                        <p>rightchoicegrowth@gmail.com</p>
+                    </div>
+                </div>
+                <div class="flex items-start my-4">
+                    <span class="icon-round xsm">
+                        <i class="fa-solid fa-phone"></i>
+                    </span>
+                    <div class="ml-2">
+                        <h4>Phone</h4>
+                        <p>(778) 968-4226</p>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:my-8 sm:my-0 my-8 lg:ml-4 sm:ml-8 ml-4">
+                <h2>Follow Us</h2>
+                <ul class="flex my-2">
+                    <li><a href=""><span class="icon-round md"><i class="fa-brands fa-facebook"></i></span></a></li>
+                    <li><a href=""><span class="icon-round md"><i class="fa-brands fa-linkedin"></i></span></a></li>
+                    <li><a href=""><span class="icon-round md"><i class="fa-brands fa-twitter"></i></span></a></li>
+                    <li><a href=""><span class="icon-round md"><i class="fa-brands fa-instagram"></i></span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class=" p-8 lg:min-w-[650px] min-w-[95%] lg:m-0 m-auto shadow-box rounded-[30px]">
+            <iframe
+            src="https://api.leadconnectorhq.com/widget/form/NBQWoZI8OojmdC13x3fa"
+                style="width:100%;height:100%;border:none;border-radius:3px"
+                id="inline-NBQWoZI8OojmdC13x3fa"
+                data-layout="{'id':'INLINE'}"
+                data-trigger-type="alwaysShow"
+                data-trigger-value=""
+                data-activation-type="alwaysActivated"
+                data-activation-value=""
+                data-deactivation-type="neverDeactivate"
+                data-deactivation-value=""
+                data-form-name="A2P REG FORM"
+                data-height="731"
+                data-layout-iframe-id="inline-NBQWoZI8OojmdC13x3fa"
+                data-form-id="NBQWoZI8OojmdC13x3fa"
+                title="A2P REG FORM">
+            </iframe>
+        </div>
+    </div>
+
+    <footer class="md:m-4 m-2 p-6 rounded-[20px] bg-brand-100 flex flex-col items-center">
+        <a href=""><img class="w-[120px]" src="https://raw.githubusercontent.com/MrBasit/Right-choice-growth/refs/heads/master/src/img/logo.png" alt="logo"></a>
+        <ul class="sm:font-medium text-[12px] flex my-4">
+            <li class="p-2"><a class="p-2" href="#Services">Services</a></li>
+            <li class="p-2"><a class="p-2" href="#Audience">Audiance</a></li>
+            <li class="p-2"><a class="p-2" href="#Testimonials">Testimonial</a></li>
+            <li class="p-2"><a class="p-2" href="#Faqs">FAQ</a></li>
+        </ul>
+        <p class="text-center">© 2025 Right Choice Growth, LLC. All rights reserved.</p>
+    </footer>
+
+    <div id="VideoPopup" class="fixed inset-0 bg-black/50 hidden justify-center items-center z-50">
+        <div class="relative bg-white rounded-xl p-2">
+            <button class="absolute text-2xl top-3 m-2 right-3 bg-white p-2 rounded-2xl cursor-pointer"> &times;</button>
+            <div class="aspect-[10/12] flex items-center justify-center">
+                <iframe id="ytFrame"
+                    class="w-full h-96"
+                    src="" 
+                    title="YouTube video player" 
+                    frameborder="0"
+                    allow="autoplay; encrypted-media" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded",()=>{
+        gsap.registerPlugin(ScrollTrigger,ScrollToPlugin,ScrollSmoother);
+        gsap.from('header .main-nav',{
+            y:-30,
+            duration:0.9
+        })
+        gsap.from('.header-content h1',{
+            y:-20,
+            opacity:0,
+            duration:0.3,
+            delay:0
+        })
+        gsap.from('.header-content p',{
+            y:-20,
+            opacity:0,
+            duration:0.3,
+            delay:0.3
+        })
+        gsap.from('.header-content a',{
+            y:-20,
+            opacity:0,
+            duration:0.3,
+            delay:0.6
+        })
+        gsap.from('.header-content img',{
+            scale:0.7,
+            duration:0.9,
+            delay:0
+        })
+
+        let services = document.querySelectorAll('#Services .service');
+        console.log(services)
+        let servicesTimeline = gsap.timeline({
+            scrollTrigger:
+            {trigger:'#Services',
+            start:'10% 75%',
+            end: '90% 75%',
+            scrub:1}
+        })
+        servicesTimeline.from(services,{
+            scale:1.2,
+            y:-10,
+            x:-10,
+            opacity:0,
+            stagger:0.5,
+            onComplete:()=>{console.log('sroll trigger complete')}
+        })
+
+        document.querySelectorAll('.btn-primary, .btn-primary-light').forEach(btn=>{
+            btn.addEventListener('mouseenter',()=>{
+                gsap.to(btn,{scale:1.1, duration:0.3});
+            });
+            btn.addEventListener('mouseleave',()=>{
+                gsap.to(btn,{scale:1, duration:0.3});
+            });
+        })
+
+        document.querySelectorAll('#Videos > div > div').forEach(vid=>{
+            vid.addEventListener('mouseenter',()=>{
+                gsap.to(vid,{scale:0.9, duration:0.3});
+            });
+            vid.addEventListener('mouseleave',()=>{
+                gsap.to(vid,{scale:1, duration:0.3});
+            });
+            vid.addEventListener('click',()=>{
+                let popup = document.querySelector('#VideoPopup');
+                const iframe = document.getElementById("ytFrame");
+
+                popup.classList.remove('hidden');
+                popup.classList.add('flex');
+                iframe.src = 'https://www.youtube.com/embed/'+vid.dataset.video;
+                gsap.fromTo(
+                    document.querySelector('#VideoPopup > div'),
+                    {scale:0.1, opacity:0.1},
+                    {scale:1, opacity:1,duration:0.3}
+                );
+
+            })
+        })
+
+        let closeVid = document.querySelector('#VideoPopup button');
+        closeVid.addEventListener('click',()=>{
+            document.getElementById("ytFrame").src='';
+            gsap.fromTo(
+                document.querySelector('#VideoPopup > div'),
+                {scale:1, opacity:1},
+                {scale:0.1, opacity:0.1,duration:0.3}
+            );
+            setTimeout(()=>{
+                closeVid.parentElement.parentElement.classList.remove('flex');
+                closeVid.parentElement.parentElement.classList.add('hidden');
+            },290)
+
+        })
+
+        document.querySelectorAll('.service').forEach(e=>{
+            e.addEventListener("mouseenter", () => {
+                gsap.to(e, { scale: 1.1, duration: 0.3, ease: "power1.out" });
+                gsap.to(e, { "--color-service-bg-200": "#F3800C","--color-service-bg-300": "#8D4A07", duration: 0.3, ease: "power1.out" });
+                gsap.to(e.children[0], { "--color-service-icon-bg-200": "white","--color-service-icon-bg-300": "white", "--color-service-icon":"#8D4A07", duration: 0.3, ease: "power1.out" });
+
+            });
+            e.addEventListener("mouseleave", () => {
+                gsap.to(e, { scale: 1, duration: 0.3, ease: "power1.out" });
+                gsap.to(e, { "--color-service-bg-200": "#ffffff","--color-service-bg-300": "#ffffff", duration: 0.3, ease: "power1.out" });
+                gsap.to(e.children[0], { "--color-service-icon-bg-200": "#F3800C","--color-service-icon-bg-300": "#8D4A07","--color-service-icon":"white", duration: 0.3, ease: "power1.out" });
+            });
+        })
+        
+
+
+        let faqButtons = document.querySelectorAll('.faq-btn');
+        let testimonialNext = document.querySelector('.testimonial-next');
+        let testimonialPrevious = document.querySelector('.testimonial-previous');
+        let faqsOpened;
+        
+        faqButtons.forEach((e,i)=>{
+            if(i>0) gsap.set(e.parentElement.children[0].children[1],{height:0, marginTop:0, marginBottom:0});
+            e.addEventListener('click',()=>{
+
+                faqButtons.forEach(e=>{
+                    if(e.parentElement.classList.contains('bg-brand-gradient')){
+                        faqsOpened =  e.parentElement;
+                    }
+                })
+
+                if(e.classList.contains('icon-round-light')){
+                    //just need to remove background and change the button color
+                    e.classList.remove('icon-round-light');
+                    e.classList.add('icon-round');
+
+                    e.children.item(0).classList.remove('fa-minus');
+                    e.children.item(0).classList.add('fa-plus');
+
+                    e.parentElement.classList.remove('active','bg-brand-gradient')
+
+                    let p = e.parentElement.children[0].children[1];
+                    gsap.to(p,
+                        {
+                            height:0,
+                            marginTop:0,
+                            marginBottom:0,
+                            duration: 0.3,
+                            ease: "power2.inOut"
+                        }
+                    );
+                }
+                else{
+                    if(faqsOpened){
+                        faqsOpened.children.item(1).classList.remove('icon-round-light');
+                        faqsOpened.classList.remove('active','bg-brand-gradient')
+                        gsap.to(faqsOpened.children[0].children[1],
+                            {
+                                height:0,
+                                marginTop:0,
+                                marginBottom:0,
+                                duration: 0.3,
+                                ease: "power2.inOut"
+                            }
+                        );
+
+                        faqsOpened.children.item(1).children.item(0).classList.remove('fa-minus');
+                        faqsOpened.children.item(1).children.item(0).classList.add('fa-plus');
+
+                        faqsOpened.children.item(1).classList.add('icon-round');
+
+
+                        e.classList.add('icon-round-light');
+                        e.classList.remove('icon-round');
+
+                        e.children.item(0).classList.add('fa-minus');
+                        e.children.item(0).classList.remove('fa-plus');
+
+                        e.parentElement.classList.add('active','bg-brand-gradient')
+
+                        gsap.to(e.parentElement.children[0].children[1],
+                            {
+                                height:e.parentElement.children[0].children[1].scrollHeight,
+                                marginTop:"16px",
+                                marginBottom:"16px",
+                                duration: 0.3,
+                                ease: "power2.inOut"
+                            }
+                        );
+
+                        faqsOpened = null;
+                    }
+                    else{
+                        e.classList.add('icon-round-light');
+                        e.classList.remove('icon-round');
+
+                        e.children.item(0).classList.add('fa-minus');
+                        e.children.item(0).classList.remove('fa-plus');
+
+                        e.parentElement.classList.add('active','bg-brand-gradient')
+
+                    }
+                }
+            })
+        })
+
+        testimonialNext.addEventListener('click',()=>{
+            let testimonials = document.querySelectorAll('.testimonial');
+            let isMovementComplete = false;
+            testimonials.forEach((e,i)=>{
+                if(e.classList.contains('active') && !isMovementComplete){
+                    let nextitem = testimonials[(i+1)%testimonials.length];
+                    gsap.to(e,{
+                        opacity:0,
+                        scale:0.8,
+                        x:-100,
+                        duration:0.5,
+                        onComplete:()=>{
+                            e.classList.remove('active');
+                            gsap.set(e, {
+                                opacity:1,
+                                scale:1,
+                                x:0
+                            });
+                            nextitem.classList.add('active');
+                        }
+                    })
+                    gsap.from(nextitem,{
+                        opacity:0,
+                        scale:1.2,
+                        x:150,
+                        duration:0.5,
+                        delay:0.5
+                    })
+                    isMovementComplete = true;
+                }
+            });
+        });
+
+        testimonialPrevious.addEventListener('click',()=>{
+            let testimonials = document.querySelectorAll('.testimonial');
+            let isMovementComplete = false;
+            testimonials.forEach((e,i)=>{
+                if(e.classList.contains('active') && !isMovementComplete){
+                    let nextitem = testimonials.item(i == 0 ? testimonials.length-1 : i-1);
+
+                    gsap.to(e,{
+                        opacity:0,
+                        scale:0.8,
+                        x:100,
+                        duration:0.5,
+                        onComplete:()=>{
+                            e.classList.remove('active');
+                            gsap.set(e, {
+                                opacity:1,
+                                scale:1,
+                                x:0
+                            });
+                            nextitem.classList.add('active');
+                        }
+                    })
+                    gsap.from(nextitem,{
+                        opacity:0,
+                        scale:1.2,
+                        x:-150,
+                        duration:0.5,
+                        delay:0.5
+                    })
+
+                    isMovementComplete = true;
+                }
+            });
+        });
+
+        document.querySelectorAll('.main-nav ul li a').forEach(a=>{
+            a.addEventListener('click',(e)=>{
+                e.preventDefault();
+                let sectionId = a.getAttribute('href');
+                let section = document.querySelector(sectionId);
+                console.log(sectionId,section)
+                gsap.to(window,{
+                    duration:1.5,
+                    scrollTo:{
+                        y:section,
+                        offsetY:0
+                    },
+                    ease:"power2.out"
+                })
+            })
+        })
+
+
+
+        let openMenuBtn = document.querySelector('.sec-nav .open');
+        let closeMenuBtn = document.querySelector('.sec-nav .close');
+        let mobileMenu = document.querySelector('.sec-nav ul');
+        let mobileMenuli = document.querySelectorAll('.sec-nav ul li');
+        let mobileMenuLiReverse = Array.from(document.querySelectorAll('.sec-nav ul li')).reverse();
+
+        document.querySelectorAll('.sec-nav ul li a').forEach(a=>{
+            a.addEventListener('click',(e)=>{
+                e.preventDefault();
+                let sectionId = a.getAttribute('href');
+                let section = document.querySelector(sectionId);
+
+                openMenuBtn.classList.remove('hidden');
+                closeMenuBtn.classList.add('hidden');
+                mobileMenu.classList.add('hidden');
+                
+                gsap.to(window,{
+                    duration:1.5,
+                    scrollTo:{
+                        y:section,
+                        offsetY:0
+                    },
+                    ease:"power2.out"
+                })
+            })
+        })
+
+        openMenuBtn.addEventListener('click',()=>{
+            openMenuBtn.classList.add('hidden');
+            closeMenuBtn.classList.remove('hidden');
+            mobileMenu.classList.remove('hidden');
+            gsap.to(mobileMenu,{
+                height:mobileMenu.scrollHeight,
+                duration:0.5,
+            });
+
+            gsap.from('.sec-nav ul li',{
+                y:-20,
+                opacity:0,
+                duration:0.4,
+                delay:0.25,
+                stagger:0.1,
+            });
+
+        })
+
+        closeMenuBtn.addEventListener('click',()=>{
+            closeMenuBtn.classList.add('hidden');
+            openMenuBtn.classList.remove('hidden');
+            gsap.to(mobileMenuLiReverse,{
+                y:-20,
+                opacity:0,
+                duration:0.4,
+                stagger:0.1,
+            });
+
+            gsap.to(mobileMenu,{
+                height:0,
+                duration:0.5,
+                delay:0.4,
+                onComplete:()=>{
+                    mobileMenu.classList.add('hidden');
+                    gsap.set(mobileMenuli,{opacity:1,y:0})
+                }
+            });
+        })
+    })
+    </script>
+</body>
+
+</html>
